@@ -1,0 +1,165 @@
+/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../sass/main_styles.scss */
+#sudoku-game {
+  margin: 1%;
+  padding: 1%;
+  background-color: #000;
+}
+
+/* line 10, ../sass/main_styles.scss */
+.row {
+  height: 10.51%;
+  margin: 0 0 0.5% 0;
+  padding: 0;
+  clear: both;
+  zoom: 1;
+  /*for ie6/7*/
+}
+
+/* line 18, ../sass/main_styles.scss */
+.row:before,
+.row:after {
+  content: '';
+  display: table;
+}
+
+/* line 22, ../sass/main_styles.scss */
+.row:after {
+  clear: both;
+}
+
+/* line 25, ../sass/main_styles.scss */
+.row:last-child {
+  margin-bottom: 0;
+}
+
+/* line 28, ../sass/main_styles.scss */
+.column {
+  float: left;
+  display: block;
+  width: 10.51%;
+  height: 100%;
+  margin: 0 0.5% 0 0;
+  background-color: #fff;
+}
+
+/* line 36, ../sass/main_styles.scss */
+.column:last-child {
+  margin-right: 0;
+}
+
+/* line 39, ../sass/main_styles.scss */
+.row-thick {
+  margin-bottom: 1%;
+}
+
+/* line 42, ../sass/main_styles.scss */
+.column-thick {
+  margin-right: 1%;
+}
+
+/* line 45, ../sass/main_styles.scss */
+.num-entry {
+  width: 75%;
+  height: 75%;
+  margin: 5%;
+  font-size: 150%;
+  text-align: center;
+}
+
+/* line 53, ../sass/main_styles.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 57, ../sass/main_styles.scss */
+.set {
+  color: #1170a5;
+  border: none;
+  padding: 4%;
+}
+
+/* line 62, ../sass/main_styles.scss */
+.blank {
+  margin: 0;
+  padding: 10%;
+  width: 68%;
+  height: 68%;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  font-size: 120%;
+}
+
+/* line 80, ../sass/main_styles.scss */
+.win {
+  display: none;
+}
