@@ -5,12 +5,15 @@
 	<title>Sudoku</title>
 	<meta name="description" content="Play Sudoku Online">
 	<meta name="author" content="Laura Deyo">
-	<link rel="icon" href="">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="stylesheets/main_styles.css">
 </head>
 <body>
 
 	<div id="content-wrapper">
+
+		<h1>Play Sudoku</h1>
 
 		<div id="sudoku-game-wrapper">
 			<div id="sudoku-game">
@@ -279,14 +282,20 @@
 		</div>
 
 		<div id="game-buttons">
-			<p id="timer"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></p>
-			<button id="play-pause" data-text-swap="Play">Pause</button>
-			<button id="add-note">Add Note</button>
-			<button id="clear-all">Clear All</button>
+			<div id="timer">
+				<p><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></p>
+			</div>
+			<a id="play-pause" class="button" data-text-swap="Play">Pause</a>
+			<a id="add-note" class="button">Add Note</a>
+			<a id="clear-all" class="button">Clear All</a>
 		</div>
 
 		<div id="win-screen">
 			<p>You won!</p>
+			<div id="win-buttons">
+				<a id="play-again" class="button">Play Again</a>
+				<a id="exit" class="button">Exit</a>
+			</div>
 		</div>
 
 	</div>

@@ -1,6 +1,7 @@
 $( function() {
 
-	var timerTracker = 0,
+	var $winScreen = $( '#win-screen' );
+		timerTracker = 0,
 		timer;
 
 	// **********
@@ -41,7 +42,7 @@ $( function() {
 				if( validateSection( '.row' ) ) {
 					if( validateSection( '.column' ) ) {
 						if( validateSection( '.box' ) ) {
-							$( '.win' ).show();
+							$winScreen.show();
 						}
 					}
 				}
@@ -131,5 +132,22 @@ $( function() {
 	$( '#clear-all' ).click( function() {
 		$( '.blank' ).val( '' );
 	});
+
+	// **********
+	// Win screen Play Again button handling
+	// **********
+	$( '#play-again' ).click( function() {
+		$( '.blank' ).val( '' );
+		$winScreen.hide();
+	});
+
+
+	// **********
+	// Win screen Exit button handling
+	// **********
+	$( '#exit' ).click( function() {
+		$winScreen.hide();
+	});
+
 
 });

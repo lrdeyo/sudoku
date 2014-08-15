@@ -1,5 +1,49 @@
 @import 'compass/reset';
 @import 'mixins';
+@import 'colors';
+
+html {
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.button:before {
+	content: "";
+	display: block;
+	background: $white;
+	border-top: 2px solid #ddd;
+	position: absolute;
+	top: -18px;
+	left: -18px;
+	bottom: -18px;
+	right: -18px;
+	z-index: -1;
+	@include box-shadow( inset 0px 8px 48px #ddd );
+}
+.button, .button:link, .button:visited {
+	@include breakpoint( small-phone ) {
+		float: left;
+		display: inline;
+	}
+	display: block;
+	width: 96.66px;
+	height: 21px;
+	margin: 5px 5px 17px 5px;
+	padding-top: 8px;
+	@include box-shadow( 0px 3px 8px #aaa, inset 0px 2px 3px $white );
+	border: solid 1px transparent;
+	@include linear-gradient( $gradientFrom, $gradientTo );
+	font-size: 0.6em; 
+	color: $midMain;
+	text-align: center;
+	cursor: pointer;
+}
+.button:hover {
+	color: $lightMain;
+	background-color: $offWhite;
+}​
+.button:focus, .button:active {
+	@include box-shadow( 0px 3px 4px #aaa inset, 0px 2px 3px $white );
+}
 
 #content-wrapper {
 	width: 768px;
@@ -17,6 +61,13 @@
 		height: 320px;
 	}
 	margin: 0 auto;
+}
+
+h1 {
+	margin: 10px 0 5px 0;
+	font-size: 1.5em;
+	color: $midMain;
+	text-align: center;
 }
 
 /* board layout */
@@ -37,7 +88,7 @@
 		height: 96%;
 		margin: 1%;
 		padding: 1%;
-		background-color: #000;
+		background-color: $darkMain;
 		.row {
 			height: 10.51%;
 			margin: 0 0 0.5% 0;
@@ -62,7 +113,7 @@
 			width: 10.51%;
 			height: 100%;
 			margin: 0 0.5% 0 0;
-			background-color: #fff;
+			background-color: $white;
 		}
 		.column:last-child {
 			margin-right: 0;
@@ -79,8 +130,10 @@
 .num-entry {
 	width: 75%;
 	height: 75%;
-	margin: 5%;
-	font-size: 150%;
+	margin: 3%;
+	padding: 10%;
+	border: none;
+	font-size: 1.5em;
 	text-align: center;
 }
 input[type=number]::-webkit-inner-spin-button, 
@@ -89,30 +142,13 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 .set {
-	border: none;
-	padding: 4%;
+	color: $darkMain;
 }
 .blank {
-	margin: 0;
-	padding: 10%;
-	width: 68%;
-	height: 68%;
-	border: 2px solid white;
-	background: rgba(255,255,255,0.5); 
-    -webkit-box-shadow: 
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
-    -moz-box-shadow: 
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
-    box-shadow: 
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
-    font-size: 120%;
-    color: #1170a5;
+	color: $positive;
 }
 .invalid {
-	color: red;
+	color: $negative;
 }
 
 #game-buttons {
@@ -125,19 +161,57 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-top: 1%;
 	font-size: 20px;
 	#timer {
-		width: 100%;
-		text-align: center;
-	}
-	button {
-		@include breakpoint( small-phone ) {
-			float: left;
-			display: inline;
-		}
-		width: 96.66px;
+		width: 94.66px;
 		height: 30px;
-		margin: 5px;
+		margin: 0px 5px 17px 5px;
+		padding-top: 6px;
+		border: solid 1px transparent;
+		@include linear-gradient( $gradientFrom, $gradientTo );
+		p {
+			width: 100%;
+			text-align: center;
+			color: $midMain
+		}
 	}
 }
 #win-screen {
+	position: absolute;
+	top: 0;
 	display: none;
+	width: 768px;
+	height: 768px;
+	@include breakpoint( small-tablet ) {
+		width: 600px;
+		height: 600px;
+	}
+	@include breakpoint( large-phone ) {
+		width: 426px;
+		height: 426px;
+	}
+	@include breakpoint( small-phone ) {
+		width: 320px;
+		height: 320px;
+	}
+	background-color: rgba( 255, 255, 255, 0.85 );
+	p {
+		margin-top: 300px;
+		font-size: 4em;
+		text-align: center;
+	}
+	#win-buttons {
+		max-width: 304px;
+		margin: 30px auto;
+		font-size: 2em;
+		.button {
+			float: left;
+			width: 140px;
+			height: 29px;
+		}
+		#play-again:hover {
+			color: $positive;
+		}
+		#exit:hover {
+			color: $negative;
+		}
+	}
 }

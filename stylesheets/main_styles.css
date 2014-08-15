@@ -1,246 +1,78 @@
-/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*
+Syntax error: Mixin box-shadow takes 1 argument but 2 were passed.
+        on line 32 of /Users/laura/Projects/sudoku/sass/main_styles.scss, in `box-shadow'
+        from line 32 of /Users/laura/Projects/sudoku/sass/main_styles.scss
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 4, ../sass/main_styles.scss */
-#content-wrapper {
-  width: 768px;
-  height: 768px;
-  margin: 0 auto;
-}
-@media (max-width: 767px) {
-  /* line 4, ../sass/main_styles.scss */
-  #content-wrapper {
-    width: 600px;
-    height: 600px;
-  }
-}
-@media (max-width: 599px) {
-  /* line 4, ../sass/main_styles.scss */
-  #content-wrapper {
-    width: 426px;
-    height: 426px;
-  }
-}
-@media (max-width: 479px) {
-  /* line 4, ../sass/main_styles.scss */
-  #content-wrapper {
-    width: 320px;
-    height: 320px;
-  }
-}
-
-/* board layout */
-/* line 23, ../sass/main_styles.scss */
-#sudoku-game-wrapper {
-  float: left;
-  width: 661px;
-  height: 661px;
-}
-@media (max-width: 767px) {
-  /* line 23, ../sass/main_styles.scss */
-  #sudoku-game-wrapper {
-    width: 493px;
-    height: 493px;
-  }
-}
-@media (max-width: 599px) {
-  /* line 23, ../sass/main_styles.scss */
-  #sudoku-game-wrapper {
-    width: 320px;
-    height: 320px;
-  }
-}
-/* line 35, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game {
-  width: 96%;
-  height: 96%;
-  margin: 1%;
-  padding: 1%;
-  background-color: #000;
-}
-/* line 41, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .row {
-  height: 10.51%;
-  margin: 0 0 0.5% 0;
-  padding: 0;
-  clear: both;
-  zoom: 1;
-  /*for ie6/7*/
-}
-/* line 49, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .row:before,
-#sudoku-game-wrapper #sudoku-game .row:after {
-  content: '';
-  display: table;
-}
-/* line 53, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .row:after {
-  clear: both;
-}
-/* line 56, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .row:last-child {
-  margin-bottom: 0;
-}
-/* line 59, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .column {
-  float: left;
-  display: block;
-  width: 10.51%;
-  height: 100%;
-  margin: 0 0.5% 0 0;
-  background-color: #fff;
-}
-/* line 67, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .column:last-child {
-  margin-right: 0;
-}
-/* line 70, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .row-thick {
-  margin-bottom: 1%;
-}
-/* line 73, ../sass/main_styles.scss */
-#sudoku-game-wrapper #sudoku-game .column-thick {
-  margin-right: 1%;
-}
-
-/* line 79, ../sass/main_styles.scss */
-.num-entry {
-  width: 75%;
-  height: 75%;
-  margin: 5%;
-  font-size: 150%;
-  text-align: center;
-}
-
-/* line 87, ../sass/main_styles.scss */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* line 91, ../sass/main_styles.scss */
-.set {
-  border: none;
-  padding: 4%;
-}
-
-/* line 95, ../sass/main_styles.scss */
-.blank {
-  margin: 0;
-  padding: 10%;
-  width: 68%;
-  height: 68%;
-  border: 2px solid white;
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-  font-size: 120%;
-  color: #1170a5;
-}
-
-/* line 114, ../sass/main_styles.scss */
-.invalid {
-  color: red;
-}
-
-/* line 118, ../sass/main_styles.scss */
-#game-buttons {
-  float: left;
-  width: 106px;
-  margin-top: 1%;
-  font-size: 20px;
-}
-@media (max-width: 479px) {
-  /* line 118, ../sass/main_styles.scss */
-  #game-buttons {
-    width: 320px;
-    height: 320px;
-  }
-}
-/* line 127, ../sass/main_styles.scss */
-#game-buttons #timer {
-  width: 100%;
-  text-align: center;
-}
-/* line 131, ../sass/main_styles.scss */
-#game-buttons button {
-  width: 96.66px;
-  height: 30px;
-  margin: 5px;
-}
-@media (max-width: 479px) {
-  /* line 131, ../sass/main_styles.scss */
-  #game-buttons button {
-    float: left;
-    display: inline;
-  }
-}
-
-/* line 141, ../sass/main_styles.scss */
-#win-screen {
-  display: none;
-}
+Backtrace:
+/Users/laura/Projects/sudoku/sass/main_styles.scss:32:in `box-shadow'
+/Users/laura/Projects/sudoku/sass/main_styles.scss:32
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:36:in `perform_arguments'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:263:in `visit_mixin'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:139:in `block (2 levels) in compile'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:138:in `block in compile'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:137:in `compile'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:101:in `block in run'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/commands/watch_project.rb:87:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/bin/compass:30:in `block in <top (required)>'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/bin/compass:44:in `call'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/bin/compass:44:in `<top (required)>'
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Mixin box-shadow takes 1 argument but 2 were passed.\A         on line 32 of /Users/laura/Projects/sudoku/sass/main_styles.scss, in `box-shadow'\A         from line 32 of /Users/laura/Projects/sudoku/sass/main_styles.scss"; }
