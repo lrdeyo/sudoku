@@ -1,46 +1,81 @@
 @import 'compass/reset';
+@import 'mixins';
 
-#sudoku-game {
+#content-wrapper {
+	width: 768px;
+	height: 768px;
+	@include breakpoint( small-tablet ) {
+		width: 600px;
+		height: 600px;
+	}
+	@include breakpoint( large-phone ) {
+		width: 426px;
+		height: 426px;
+	}
+	@include breakpoint( small-phone ) {
+		width: 320px;
+		height: 320px;
+	}
+	margin: 0 auto;
+}
+
+/* board layout */
+#sudoku-game-wrapper {
 	float: left;
-	margin: 1%;
-	padding: 1%;
-	background-color: #000;
+	width: 661px;
+	height: 661px;
+	@include breakpoint( small-tablet ) {
+		width: 493px;
+		height: 493px;
+	}
+	@include breakpoint( large-phone ) {
+		width: 320px;
+		height: 320px;
+	}
+	#sudoku-game {
+		width: 96%;
+		height: 96%;
+		margin: 1%;
+		padding: 1%;
+		background-color: #000;
+		.row {
+			height: 10.51%;
+			margin: 0 0 0.5% 0;
+			padding: 0;
+			clear: both;
+			zoom: 1; /*for ie6/7*/
+		}
+		.row:before,
+		.row:after {
+			content: '';
+			display: table;
+		}
+		.row:after {
+			clear: both;
+		}
+		.row:last-child {
+			margin-bottom: 0;
+		}
+		.column {
+			float: left;
+			display: block;
+			width: 10.51%;
+			height: 100%;
+			margin: 0 0.5% 0 0;
+			background-color: #fff;
+		}
+		.column:last-child {
+			margin-right: 0;
+		}
+		.row-thick {
+			margin-bottom: 1%;
+		}
+		.column-thick {
+			margin-right: 1%;
+		}
+	}	
 }
-.row {
-	height: 10.51%;
-	margin: 0 0 0.5% 0;
-	padding: 0;
-	clear: both;
-	zoom: 1; /*for ie6/7*/
-}
-.row:before,
-.row:after {
-	content: '';
-	display: table;
-}
-.row:after {
-	clear: both;
-}
-.row:last-child {
-	margin-bottom: 0;
-}
-.column {
-	float: left;
-	display: block;
-	width: 10.51%;
-	height: 100%;
-	margin: 0 0.5% 0 0;
-	background-color: #fff;
-}
-.column:last-child {
-	margin-right: 0;
-}
-.row-thick {
-	margin-bottom: 1%;
-}
-.column-thick {
-	margin-right: 1%;
-}
+
 .num-entry {
 	width: 75%;
 	height: 75%;
@@ -54,7 +89,6 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 .set {
-	color: #1170a5;
 	border: none;
 	padding: 4%;
 }
@@ -75,19 +109,34 @@ input[type=number]::-webkit-outer-spin-button {
       inset 0 0 8px  rgba(0,0,0,0.1),
             0 0 16px rgba(0,0,0,0.1); 
     font-size: 120%;
+    color: #1170a5;
 }
 .invalid {
 	color: red;
 }
-#play-pause {
-	content: 'Pause';
-}
-.play {
-	content: 'Play';
-}
+
 #game-buttons {
 	float: left;
+	width: 106px;
+	@include breakpoint( small-phone ) {
+		width: 320px;
+		height: 320px;
+	}
 	margin-top: 1%;
+	font-size: 20px;
+	#timer {
+		width: 100%;
+		text-align: center;
+	}
+	button {
+		@include breakpoint( small-phone ) {
+			float: left;
+			display: inline;
+		}
+		width: 96.66px;
+		height: 30px;
+		margin: 5px;
+	}
 }
 #win-screen {
 	display: none;

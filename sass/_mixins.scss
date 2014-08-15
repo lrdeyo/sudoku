@@ -1,0 +1,14 @@
+@mixin breakpoint( $point ) {
+	@if $point == small-phone {
+		@media ( max-width: 479px ) { @content; }
+	}
+	@else if $point == large-phone {
+		@media ( max-width: 599px ) { @content; }
+	}
+	@else if $point == small-tablet {
+		@media ( max-width: 767px ) { @content; }
+	}
+	@else if $point == large-tablet {
+		@media( max-width: 1024px ) { @content; }
+	}
+}

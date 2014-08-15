@@ -1,36 +1,7 @@
 $( function() {
 
-	var $window = $( window ),
-		gameWidth = 0.94,
-		$windowWidthAdj = $window.width() * gameWidth,
-		$windowHeightAdj = $window.height() * gameWidth,
-		gameDimensions = 768 * gameWidth,
-		$sudokuGame = $( '#sudoku-game' ),
-		$numEntry = $( '.num-entry' ),
-		$gameButtons = $( '#game-buttons' ),
-		timerTracker = 0,
-		timer,
-		resizeSetTimeout;
-
-	// **********
-	// Set up board width and height
-	// **********
-	var setBoardDimensions = function() {
-		// If window width > window height & window height < preset gameDimensions - set game dimensions
-		// Else window width < window height & window width < preset gameDimensions - set game dimensions
-		if ( $windowWidthAdj  > $windowHeightAdj ) {
-			if ( $windowHeightAdj < gameDimensions ) {
-				gameDimensions = $windowHeightAdj;
-			}
-			$sudokuGame.css({ height: gameDimensions, width: gameDimensions });
-		} else {
-			if ( $windowWidthAdj < gameDimensions ) {
-				gameDimensions = $windowWidthAdj;
-			}
-			$sudokuGame.css({ height: gameDimensions, width: gameDimensions });
-		}
-	};
-	setBoardDimensions();
+	var timerTracker = 0,
+		timer;
 
 	// **********
 	// Verify entry is a number & if board is completed correctly
@@ -161,22 +132,4 @@ $( function() {
 		$( '.blank' ).val( '' );
 	});
 
-	// **********
-	// Reset board dimensions on window resize
-	// **********
-	$window.resize( function() {
-		// Check to ensure window was resized and do not call each miniscule increment
-		if( $windowWidthAdj !== $window.width() * gameWidth || $windowHeightAdj !== $window.height() * gameWidth ){
-
-			clearTimeout( resizeSetTimeout );
-
-			resizeSetTimeout = setTimeout( function(){
-				$windowWidthAdj = $window.width() * gameWidth;
-				$windowHeightAdj = $window.height() * gameWidth;
-				gameDimensions = 768 * gameWidth;
-				setBoardDimensions();
-			}, 200);
-
-		}
-	});
 });
