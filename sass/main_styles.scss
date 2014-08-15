@@ -29,7 +29,7 @@ html {
 	height: 21px;
 	margin: 5px 5px 17px 5px;
 	padding-top: 8px;
-	@include box-shadow( 0px 3px 8px #aaa, inset 0px 2px 3px $white );
+	box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px $white;
 	border: solid 1px transparent;
 	@include linear-gradient( $gradientFrom, $gradientTo );
 	font-size: 0.6em; 
@@ -42,7 +42,7 @@ html {
 	background-color: $offWhite;
 }​
 .button:focus, .button:active {
-	@include box-shadow( 0px 3px 4px #aaa inset, 0px 2px 3px $white );
+	box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px $white;
 }
 
 #content-wrapper {
@@ -192,7 +192,7 @@ input[type=number]::-webkit-outer-spin-button {
 		width: 320px;
 		height: 320px;
 	}
-	background-color: rgba( 255, 255, 255, 0.85 );
+	background-color: rgba( 255, 255, 255, 0.85);
 	p {
 		margin-top: 300px;
 		font-size: 4em;
