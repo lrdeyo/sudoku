@@ -63,14 +63,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 5, ../sass/main_styles.scss */
+/* line 3, ../sass/main_styles.scss */
 #sudoku-game {
+  float: left;
   margin: 1%;
   padding: 1%;
   background-color: #000;
 }
 
-/* line 10, ../sass/main_styles.scss */
+/* line 9, ../sass/main_styles.scss */
 .row {
   height: 10.51%;
   margin: 0 0 0.5% 0;
@@ -80,24 +81,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   /*for ie6/7*/
 }
 
-/* line 18, ../sass/main_styles.scss */
+/* line 17, ../sass/main_styles.scss */
 .row:before,
 .row:after {
   content: '';
   display: table;
 }
 
-/* line 22, ../sass/main_styles.scss */
+/* line 21, ../sass/main_styles.scss */
 .row:after {
   clear: both;
 }
 
-/* line 25, ../sass/main_styles.scss */
+/* line 24, ../sass/main_styles.scss */
 .row:last-child {
   margin-bottom: 0;
 }
 
-/* line 28, ../sass/main_styles.scss */
+/* line 27, ../sass/main_styles.scss */
 .column {
   float: left;
   display: block;
@@ -107,22 +108,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: #fff;
 }
 
-/* line 36, ../sass/main_styles.scss */
+/* line 35, ../sass/main_styles.scss */
 .column:last-child {
   margin-right: 0;
 }
 
-/* line 39, ../sass/main_styles.scss */
+/* line 38, ../sass/main_styles.scss */
 .row-thick {
   margin-bottom: 1%;
 }
 
-/* line 42, ../sass/main_styles.scss */
+/* line 41, ../sass/main_styles.scss */
 .column-thick {
   margin-right: 1%;
 }
 
-/* line 45, ../sass/main_styles.scss */
+/* line 44, ../sass/main_styles.scss */
 .num-entry {
   width: 75%;
   height: 75%;
@@ -131,21 +132,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-align: center;
 }
 
-/* line 53, ../sass/main_styles.scss */
+/* line 52, ../sass/main_styles.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 57, ../sass/main_styles.scss */
+/* line 56, ../sass/main_styles.scss */
 .set {
   color: #1170a5;
   border: none;
   padding: 4%;
 }
 
-/* line 62, ../sass/main_styles.scss */
+/* line 61, ../sass/main_styles.scss */
 .blank {
   margin: 0;
   padding: 10%;
@@ -159,7 +160,28 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 120%;
 }
 
-/* line 80, ../sass/main_styles.scss */
-.win {
+/* line 79, ../sass/main_styles.scss */
+.invalid {
+  color: red;
+}
+
+/* line 82, ../sass/main_styles.scss */
+#play-pause {
+  content: 'Pause';
+}
+
+/* line 85, ../sass/main_styles.scss */
+.play {
+  content: 'Play';
+}
+
+/* line 88, ../sass/main_styles.scss */
+#game-buttons {
+  float: left;
+  margin-top: 1%;
+}
+
+/* line 92, ../sass/main_styles.scss */
+#win-screen {
   display: none;
 }

@@ -1,8 +1,7 @@
 @import 'compass/reset';
-@import '_mixins.scss';
-@import '_colors.scss';
 
 #sudoku-game {
+	float: left;
 	margin: 1%;
 	padding: 1%;
 	background-color: #000;
@@ -77,6 +76,19 @@ input[type=number]::-webkit-outer-spin-button {
             0 0 16px rgba(0,0,0,0.1); 
     font-size: 120%;
 }
-.win {
+.invalid {
+	color: red;
+}
+#play-pause {
+	content: 'Pause';
+}
+.play {
+	content: 'Play';
+}
+#game-buttons {
+	float: left;
+	margin-top: 1%;
+}
+#win-screen {
 	display: none;
 }
