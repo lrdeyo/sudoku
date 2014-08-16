@@ -7,12 +7,12 @@ $( function() {
 	// **********
 	// Verify entry is a number & if board is completed correctly
 	// **********	
-	$( 'input[type=number]' ).keypress( function( evt ) {
+	$( 'input.blank' ).keypress( function( evt ) {
 		// Take care of styling in case previous entry was invalid
 		$(this).removeClass( 'invalid' );
 		// If entry is not a number do not allow to be entered
 		// Else if entry is a number but a value exist clear that value to allow to be overwritten
-		if ( !String.fromCharCode( evt.keyCode ).match( /[1-9\.]/ ) ) {
+		if ( !String.fromCharCode( evt.which ).match( /[1-9\.]/ ) ) {
 			return false;
 		} else {
 			$(this).val( '' );
@@ -147,6 +147,15 @@ $( function() {
 	// **********
 	$( '#exit' ).click( function() {
 		$winScreen.hide();
+	});
+
+	// **********
+	// Handle enter - if allow defualt all invalid values become valid
+	// **********
+	$( 'input' ).on( 'keydown keyup', function( evt ) {
+		if( evt.which == 13 ) {
+			evt.preventDefault();
+		}
 	});
 
 

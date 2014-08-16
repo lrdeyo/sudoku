@@ -263,21 +263,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* line 144, ../sass/main_styles.scss */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* line 147, ../sass/main_styles.scss */
 .set {
   color: #111111;
 }
 
-/* line 147, ../sass/main_styles.scss */
+/* line 150, ../sass/main_styles.scss */
 .blank {
   color: #04a0b5;
 }
 
-/* line 150, ../sass/main_styles.scss */
+/* line 153, ../sass/main_styles.scss */
 .invalid {
   color: #e20a0a;
 }
 
-/* line 154, ../sass/main_styles.scss */
+/* line 157, ../sass/main_styles.scss */
 #game-buttons {
   float: left;
   width: 106px;
@@ -285,13 +290,13 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 20px;
 }
 @media (max-width: 479px) {
-  /* line 154, ../sass/main_styles.scss */
+  /* line 157, ../sass/main_styles.scss */
   #game-buttons {
     width: 320px;
     height: 320px;
   }
 }
-/* line 163, ../sass/main_styles.scss */
+/* line 166, ../sass/main_styles.scss */
 #game-buttons #timer {
   width: 94.66px;
   height: 30px;
@@ -313,14 +318,14 @@ input[type=number]::-webkit-outer-spin-button {
   background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f7f7f7', EndColorStr='#e7e7e7');
 }
-/* line 170, ../sass/main_styles.scss */
+/* line 173, ../sass/main_styles.scss */
 #game-buttons #timer p {
   width: 100%;
   text-align: center;
   color: #555555;
 }
 
-/* line 177, ../sass/main_styles.scss */
+/* line 180, ../sass/main_styles.scss */
 #win-screen {
   position: absolute;
   top: 0;
@@ -330,49 +335,49 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: rgba(255, 255, 255, 0.85);
 }
 @media (max-width: 767px) {
-  /* line 177, ../sass/main_styles.scss */
+  /* line 180, ../sass/main_styles.scss */
   #win-screen {
     width: 600px;
     height: 600px;
   }
 }
 @media (max-width: 599px) {
-  /* line 177, ../sass/main_styles.scss */
+  /* line 180, ../sass/main_styles.scss */
   #win-screen {
     width: 426px;
     height: 426px;
   }
 }
 @media (max-width: 479px) {
-  /* line 177, ../sass/main_styles.scss */
+  /* line 180, ../sass/main_styles.scss */
   #win-screen {
     width: 320px;
     height: 320px;
   }
 }
-/* line 196, ../sass/main_styles.scss */
+/* line 199, ../sass/main_styles.scss */
 #win-screen p {
   margin-top: 300px;
   font-size: 4em;
   text-align: center;
 }
-/* line 201, ../sass/main_styles.scss */
+/* line 204, ../sass/main_styles.scss */
 #win-screen #win-buttons {
   max-width: 304px;
   margin: 30px auto;
   font-size: 2em;
 }
-/* line 205, ../sass/main_styles.scss */
+/* line 208, ../sass/main_styles.scss */
 #win-screen #win-buttons .button {
   float: left;
   width: 140px;
   height: 29px;
 }
-/* line 210, ../sass/main_styles.scss */
+/* line 213, ../sass/main_styles.scss */
 #win-screen #win-buttons #play-again:hover {
   color: #04a0b5;
 }
-/* line 213, ../sass/main_styles.scss */
+/* line 216, ../sass/main_styles.scss */
 #win-screen #win-buttons #exit:hover {
   color: #e20a0a;
 }
