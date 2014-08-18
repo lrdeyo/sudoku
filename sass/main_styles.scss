@@ -4,6 +4,7 @@
 
 html {
 	font-family: 'Didact Gothic', sans-serif;
+	background-color: $white;
 }
 
 .button, .button:link, .button:visited {
@@ -24,10 +25,6 @@ html {
 	text-align: center;
 	cursor: pointer;
 }
-.button:hover {
-	color: $lightMain;
-	background-color: $offWhite;
-}​
 .button:focus, .button:active {
 	@include box-shadow( 0 3px 4px #aaa inset, 0 2px 3px $white );
 }

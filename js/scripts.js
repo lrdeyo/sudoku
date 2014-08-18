@@ -4,7 +4,8 @@ $( function() {
 		addNote = false,
 		timerTracker = 0,
 		timer,
-		entryNum;
+		entryNum,
+		curFocusInput;
 
 	// **********
 	// Verify entry is a number & if board is completed correctly
@@ -159,6 +160,7 @@ $( function() {
 	$( '#add-note' ).click( function( evt ) {
 		addNote = !addNote;
 		$(this).toggleClass( 'adding-note' );
+		$( '#' + curFocusInput ).focus();
 	});
 
 	// **********
@@ -198,6 +200,7 @@ $( function() {
 	// **********
 	$( '.blank' ).focus( function ( evt ) {
 		evt.preventDefault();
+		curFocusInput = $(this).attr( 'id' );
 		$(this).on( 'mousewheel', function ( evt ) {
 			evt.preventDefault();
 		});

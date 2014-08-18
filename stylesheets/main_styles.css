@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,9 +66,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 5, ../sass/main_styles.scss */
 html {
   font-family: 'Didact Gothic', sans-serif;
+  background-color: white;
 }
 
-/* line 9, ../sass/main_styles.scss */
+/* line 10, ../sass/main_styles.scss */
 .button, .button:link, .button:visited {
   display: block;
   width: 94.66px;
@@ -100,56 +100,49 @@ html {
   cursor: pointer;
 }
 @media (max-width: 479px) {
-  /* line 9, ../sass/main_styles.scss */
+  /* line 10, ../sass/main_styles.scss */
   .button, .button:link, .button:visited {
     float: left;
     display: inline;
   }
 }
 
-/* line 27, ../sass/main_styles.scss */
-.button:hover {
-  color: #a7a7a7;
-  background-color: whitesmoke;
-}
-
-/* line 31, ../sass/main_styles.scss */
-​
+/* line 28, ../sass/main_styles.scss */
 .button:focus, .button:active {
   -webkit-box-shadow: 0 3px 4px #aaaaaa inset, 0 2px 3px white;
   -moz-box-shadow: 0 3px 4px #aaaaaa inset, 0 2px 3px white;
   box-shadow: 0 3px 4px #aaaaaa inset, 0 2px 3px white;
 }
 
-/* line 35, ../sass/main_styles.scss */
+/* line 32, ../sass/main_styles.scss */
 #content-wrapper {
   width: 768px;
   height: 768px;
   margin: 0 auto;
 }
 @media (max-width: 767px) {
-  /* line 35, ../sass/main_styles.scss */
+  /* line 32, ../sass/main_styles.scss */
   #content-wrapper {
     width: 600px;
     height: 600px;
   }
 }
 @media (max-width: 599px) {
-  /* line 35, ../sass/main_styles.scss */
+  /* line 32, ../sass/main_styles.scss */
   #content-wrapper {
     width: 426px;
     height: 426px;
   }
 }
 @media (max-width: 479px) {
-  /* line 35, ../sass/main_styles.scss */
+  /* line 32, ../sass/main_styles.scss */
   #content-wrapper {
     width: 320px;
     height: 320px;
   }
 }
 
-/* line 53, ../sass/main_styles.scss */
+/* line 50, ../sass/main_styles.scss */
 h1 {
   margin: 10px 0 5px 0;
   font-size: 1.5em;
@@ -158,27 +151,27 @@ h1 {
 }
 
 /* board layout */
-/* line 61, ../sass/main_styles.scss */
+/* line 58, ../sass/main_styles.scss */
 #sudoku-game-wrapper {
   float: left;
   width: 661px;
   height: 661px;
 }
 @media (max-width: 767px) {
-  /* line 61, ../sass/main_styles.scss */
+  /* line 58, ../sass/main_styles.scss */
   #sudoku-game-wrapper {
     width: 493px;
     height: 493px;
   }
 }
 @media (max-width: 599px) {
-  /* line 61, ../sass/main_styles.scss */
+  /* line 58, ../sass/main_styles.scss */
   #sudoku-game-wrapper {
     width: 320px;
     height: 320px;
   }
 }
-/* line 73, ../sass/main_styles.scss */
+/* line 70, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game {
   width: 96%;
   height: 96%;
@@ -186,7 +179,7 @@ h1 {
   padding: 1%;
   background-color: #111111;
 }
-/* line 79, ../sass/main_styles.scss */
+/* line 76, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row {
   height: 10.51%;
   margin: 0 0 0.5% 0;
@@ -195,21 +188,21 @@ h1 {
   zoom: 1;
   /*for ie6/7*/
 }
-/* line 87, ../sass/main_styles.scss */
+/* line 84, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row:before,
 #sudoku-game-wrapper #sudoku-game .row:after {
   content: '';
   display: table;
 }
-/* line 91, ../sass/main_styles.scss */
+/* line 88, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row:after {
   clear: both;
 }
-/* line 94, ../sass/main_styles.scss */
+/* line 91, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row:last-child {
   margin-bottom: 0;
 }
-/* line 97, ../sass/main_styles.scss */
+/* line 94, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .column {
   position: relative;
   float: left;
@@ -219,20 +212,20 @@ h1 {
   margin: 0 0.5% 0 0;
   background-color: white;
 }
-/* line 106, ../sass/main_styles.scss */
+/* line 103, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .column:last-child {
   margin-right: 0;
 }
-/* line 109, ../sass/main_styles.scss */
+/* line 106, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row-thick {
   margin-bottom: 1%;
 }
-/* line 112, ../sass/main_styles.scss */
+/* line 109, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .column-thick {
   margin-right: 1%;
 }
 
-/* line 118, ../sass/main_styles.scss */
+/* line 115, ../sass/main_styles.scss */
 .num-entry {
   width: 75%;
   height: 75%;
@@ -243,52 +236,52 @@ h1 {
   text-align: center;
 }
 
-/* line 128, ../sass/main_styles.scss */
+/* line 125, ../sass/main_styles.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 132, ../sass/main_styles.scss */
+/* line 129, ../sass/main_styles.scss */
 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-/* line 135, ../sass/main_styles.scss */
+/* line 132, ../sass/main_styles.scss */
 .set {
   color: #111111;
 }
 
-/* line 138, ../sass/main_styles.scss */
+/* line 135, ../sass/main_styles.scss */
 .blank {
   color: #04a0b5;
 }
 
-/* line 141, ../sass/main_styles.scss */
+/* line 138, ../sass/main_styles.scss */
 .invalid {
   color: #e20a0a;
 }
 
-/* line 145, ../sass/main_styles.scss */
+/* line 142, ../sass/main_styles.scss */
 .notes-wrapper {
   position: absolute;
   top: 0;
   margin: 2% 0 0 8%;
 }
 @media (max-width: 599px) {
-  /* line 145, ../sass/main_styles.scss */
+  /* line 142, ../sass/main_styles.scss */
   .notes-wrapper {
     margin-top: 6%;
   }
 }
-/* line 152, ../sass/main_styles.scss */
+/* line 149, ../sass/main_styles.scss */
 .notes-wrapper .notes-num {
   position: absolute;
   display: none;
 }
 @media (max-width: 599px) {
-  /* line 152, ../sass/main_styles.scss */
+  /* line 149, ../sass/main_styles.scss */
   .notes-wrapper .notes-num {
     font-size: 0.6em;
   }
@@ -433,7 +426,7 @@ input[type='number'] {
   }
 }
 
-/* line 168, ../sass/main_styles.scss */
+/* line 165, ../sass/main_styles.scss */
 #game-buttons {
   float: left;
   width: 106px;
@@ -441,12 +434,12 @@ input[type='number'] {
   font-size: 20px;
 }
 @media (max-width: 479px) {
-  /* line 168, ../sass/main_styles.scss */
+  /* line 165, ../sass/main_styles.scss */
   #game-buttons {
     width: 320px;
   }
 }
-/* line 176, ../sass/main_styles.scss */
+/* line 173, ../sass/main_styles.scss */
 #game-buttons #timer {
   width: 94.66px;
   height: 30px;
@@ -469,18 +462,18 @@ input[type='number'] {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f7f7f7', EndColorStr='#e7e7e7');
 }
 @media (max-width: 479px) {
-  /* line 176, ../sass/main_styles.scss */
+  /* line 173, ../sass/main_styles.scss */
   #game-buttons #timer {
     width: 312px;
   }
 }
-/* line 186, ../sass/main_styles.scss */
+/* line 183, ../sass/main_styles.scss */
 #game-buttons #timer p {
   width: 100%;
   text-align: center;
   color: #555555;
 }
-/* line 192, ../sass/main_styles.scss */
+/* line 189, ../sass/main_styles.scss */
 #game-buttons .adding-note {
   -webkit-box-shadow: 0 1px 4px #aaaaaa inset, 0 2px 3px white;
   -moz-box-shadow: 0 1px 4px #aaaaaa inset, 0 2px 3px white;
@@ -488,7 +481,7 @@ input[type='number'] {
   color: #04a0b5;
 }
 
-/* line 198, ../sass/main_styles.scss */
+/* line 195, ../sass/main_styles.scss */
 #win-screen {
   position: absolute;
   top: 0;
@@ -499,49 +492,49 @@ input[type='number'] {
   background-color: rgba(255, 255, 255, 0.85);
 }
 @media (max-width: 767px) {
-  /* line 198, ../sass/main_styles.scss */
+  /* line 195, ../sass/main_styles.scss */
   #win-screen {
     width: 600px;
     height: 600px;
   }
 }
 @media (max-width: 599px) {
-  /* line 198, ../sass/main_styles.scss */
+  /* line 195, ../sass/main_styles.scss */
   #win-screen {
     width: 426px;
     height: 426px;
   }
 }
 @media (max-width: 479px) {
-  /* line 198, ../sass/main_styles.scss */
+  /* line 195, ../sass/main_styles.scss */
   #win-screen {
     width: 320px;
     height: 320px;
   }
 }
-/* line 218, ../sass/main_styles.scss */
+/* line 215, ../sass/main_styles.scss */
 #win-screen p {
   margin-top: 300px;
   font-size: 4em;
   text-align: center;
 }
-/* line 223, ../sass/main_styles.scss */
+/* line 220, ../sass/main_styles.scss */
 #win-screen #win-buttons {
   max-width: 304px;
   margin: 30px auto;
   font-size: 2em;
 }
-/* line 227, ../sass/main_styles.scss */
+/* line 224, ../sass/main_styles.scss */
 #win-screen #win-buttons .button {
   float: left;
   width: 140px;
   height: 29px;
 }
-/* line 232, ../sass/main_styles.scss */
+/* line 229, ../sass/main_styles.scss */
 #win-screen #win-buttons #play-again:hover {
   color: #04a0b5;
 }
-/* line 235, ../sass/main_styles.scss */
+/* line 232, ../sass/main_styles.scss */
 #win-screen #win-buttons #exit:hover {
   color: #e20a0a;
 }
