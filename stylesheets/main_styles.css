@@ -484,7 +484,7 @@ input[type='number'] {
 /* line 195, ../sass/main_styles.scss */
 #win-screen {
   position: absolute;
-  top: 0;
+  top: 38%;
   display: none;
   width: 768px;
   height: 768px;

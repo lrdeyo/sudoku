@@ -10,7 +10,7 @@ $( function() {
 	// **********
 	// Verify entry is a number & if board is completed correctly
 	// **********
-	$( 'input.blank' ).keypress( function( evt ) {
+	$( '.blank' ).keypress( function( evt ) {
 		// Take care of styling in case previous entry was invalid
 		$(this).removeClass( 'invalid' );
 		// If entry is not a number do not allow to be entered
