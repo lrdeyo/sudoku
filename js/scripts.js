@@ -196,13 +196,11 @@ $( function() {
 	// **********
 	// Prevent scroll in input number fields
 	// **********
-	$( 'input.blank' ).on( 'focus', 'input[type=number]', function ( evt ) {
-		$(this).on( 'mousewheel.disableScroll', function ( evt ) {
-			e.preventDefault();
+	$( '.blank' ).focus( function ( evt ) {
+		evt.preventDefault();
+		$(this).on( 'mousewheel', function ( evt ) {
+			evt.preventDefault();
 		});
-	});
-	$( 'input.blank' ).on( 'focus', 'input[type=number]', function ( evt ) {
-		$(this).off( 'mousewheel.disableScroll' );
 	});
 
 });
