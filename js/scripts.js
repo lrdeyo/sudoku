@@ -1,6 +1,7 @@
 $( function() {
 
-	var $winScreen = $( '#win-screen' ),
+	var $blank = $( '.blank' ),
+		$winScreen = $( '#win-screen' ),
 		addNote = false,
 		timerTracker = 0,
 		timer,
@@ -10,7 +11,7 @@ $( function() {
 	// **********
 	// Verify entry is a number & if board is completed correctly
 	// **********
-	$( '.blank' ).keypress( function( evt ) {
+	$blank.keypress( function( evt ) {
 		// Take care of styling in case previous entry was invalid
 		$(this).removeClass( 'invalid' );
 		// If entry is not a number do not allow to be entered
@@ -51,24 +52,16 @@ $( function() {
 				// Clear the notes for this input
 				$( '#notes-' + curBoxNum ).hide();
 				// Validate the row, the column and the box of the entry
-				if( validateInput( rowClass[0], entryVal ) ) {
-					if( validateInput( columnClass[0], entryVal ) ) {
-						if( validateInput( boxClass[0], entryVal ) ) {
-							currentValidate = true;
-						}
-					}
+				if( validateInput( rowClass[0], entryVal ) && validateInput( columnClass[0], entryVal ) && validateInput( boxClass[0], entryVal ) ) {
+					currentValidate = true;
 				}
 				// If the entry did not validate within its own row, column, and box signal to user
 				// Else validate all rows, then all columns, then all 9 input 'boxes'
 				if( !currentValidate ) {
 					$(this).addClass( 'invalid' );
 				} else {
-					if( validateSection( '.row' ) ) {
-						if( validateSection( '.column' ) ) {
-							if( validateSection( '.box' ) ) {
-								$winScreen.show();
-							}
-						}
+					if( validateSection( '.row' ) && validateSection( '.column' ) && validateSection( '.box' ) ) {
+						$winScreen.show();
 					}
 				}
 			}
@@ -167,14 +160,14 @@ $( function() {
 	// Clear board on clear button click
 	// **********
 	$( '#clear-all' ).click( function() {
-		$( '.blank' ).val( '' );
+		$blank.val( '' );
 	});
 
 	// **********
 	// Win screen Play Again button handling
 	// **********
 	$( '#play-again' ).click( function() {
-		$( '.blank' ).val( '' );
+		$blank.val( '' );
 		$winScreen.hide();
 	});
 
@@ -198,7 +191,7 @@ $( function() {
 	// **********
 	// Prevent scroll in input number fields
 	// **********
-	$( '.blank' ).focus( function ( evt ) {
+	$blank.focus( function ( evt ) {
 		evt.preventDefault();
 		curFocusInput = $(this).attr( 'id' );
 		$(this).on( 'mousewheel', function ( evt ) {
