@@ -110,7 +110,7 @@ $( function() {
 					return false;
 				}
 			});
-			// If the section just checking idd 
+			// If the section just checking id
 			if( sudokuValuesTracker.length !== 0 ) {
 				return false;
 			}
@@ -123,7 +123,7 @@ $( function() {
 	// Timer handling
 	// **********
 	var timerFunc = function() {
-		// Interval defined in function to be able to be cleared and restarted with play/pause button 
+		// Interval defined in function to be able to be cleared and restarted with play/pause button
 		timer = setInterval( function() {
 			$( '#seconds' ).html( addZero( timerTracker % 60 ) );
 			$( '#minutes' ).html( addZero( parseInt( timerTracker / 60, 10 ) % 60 ) );
