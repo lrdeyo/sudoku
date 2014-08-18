@@ -12,12 +12,16 @@
 		@media( max-width: 1024px ) { @content; }
 	}
 }
-@mixin box-shadow($shadow) {
-	-webkit-box-shadow: $shadow;
-	-moz-box-shadow: $shadow;
-	box-shadow: $shadow;
+@mixin box-shadow( $shadow1, $shadow2:false ) {
+	$shadows: $shadow1;
+	@if $shadow2 {
+		$shadows: $shadow1, $shadow2;
+	}
+	-webkit-box-shadow: $shadows;
+	-moz-box-shadow: $shadows;
+	box-shadow: $shadows;
 }
-@mixin linear-gradient($fromColor, $toColor) {	
+@mixin linear-gradient( $fromColor, $toColor ) {
 	background-color: $fromColor; /* Fallback Color */
 	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
 	background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
@@ -26,4 +30,42 @@
 	background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
 	background-image:         linear-gradient(top, $fromColor, $toColor);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+@mixin notes-position( $close, $middle, $far ) {
+	.notes-1 {
+		top: $close;
+		left: $close;
+	}
+	.notes-2 {
+		top: $close;
+		left: $middle;
+	}
+	.notes-3 {
+		top: $close;
+		left: $far;
+	}
+	.notes-4 {
+		top: $middle;
+		left: $close;
+	}
+	.notes-5 {
+		top: $middle;
+		left: $middle;
+	}
+	.notes-6 {
+		top: $middle;
+		left: $far;
+	}
+	.notes-7 {
+		top: $far;
+		left: $close;
+	}
+	.notes-8 {
+		top: $far;
+		left: $middle;
+	}
+	.notes-9 {
+		top: $far;
+		left: $far;
+	}
 }

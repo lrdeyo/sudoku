@@ -70,30 +70,15 @@ html {
 }
 
 /* line 9, ../sass/main_styles.scss */
-.button:before {
-  content: "";
-  display: block;
-  background: white;
-  border-top: 2px solid #ddd;
-  position: absolute;
-  top: -18px;
-  left: -18px;
-  bottom: -18px;
-  right: -18px;
-  z-index: -1;
-  -webkit-box-shadow: inset 0px 8px 48px #dddddd;
-  -moz-box-shadow: inset 0px 8px 48px #dddddd;
-  box-shadow: inset 0px 8px 48px #dddddd;
-}
-
-/* line 22, ../sass/main_styles.scss */
 .button, .button:link, .button:visited {
   display: block;
-  width: 96.66px;
+  width: 94.66px;
   height: 21px;
   margin: 5px 5px 17px 5px;
   padding-top: 8px;
-  box-shadow: 0px 3px 8px #aaaaaa, inset 0px 2px 3px white;
+  -webkit-box-shadow: 0 3px 8px #aaaaaa, inset 0 2px 3px white;
+  -moz-box-shadow: 0 3px 8px #aaaaaa, inset 0 2px 3px white;
+  box-shadow: 0 3px 8px #aaaaaa, inset 0 2px 3px white;
   border: solid 1px transparent;
   background-color: #f7f7f7;
   /* Fallback Color */
@@ -115,54 +100,56 @@ html {
   cursor: pointer;
 }
 @media (max-width: 479px) {
-  /* line 22, ../sass/main_styles.scss */
+  /* line 9, ../sass/main_styles.scss */
   .button, .button:link, .button:visited {
     float: left;
     display: inline;
   }
 }
 
-/* line 40, ../sass/main_styles.scss */
+/* line 27, ../sass/main_styles.scss */
 .button:hover {
   color: #a7a7a7;
   background-color: whitesmoke;
 }
 
-/* line 44, ../sass/main_styles.scss */
+/* line 31, ../sass/main_styles.scss */
 ​
 .button:focus, .button:active {
-  box-shadow: 0px 3px 4px #aaaaaa inset, 0px 2px 3px white;
+  -webkit-box-shadow: 0 3px 4px #aaaaaa inset, 0 2px 3px white;
+  -moz-box-shadow: 0 3px 4px #aaaaaa inset, 0 2px 3px white;
+  box-shadow: 0 3px 4px #aaaaaa inset, 0 2px 3px white;
 }
 
-/* line 48, ../sass/main_styles.scss */
+/* line 35, ../sass/main_styles.scss */
 #content-wrapper {
   width: 768px;
   height: 768px;
   margin: 0 auto;
 }
 @media (max-width: 767px) {
-  /* line 48, ../sass/main_styles.scss */
+  /* line 35, ../sass/main_styles.scss */
   #content-wrapper {
     width: 600px;
     height: 600px;
   }
 }
 @media (max-width: 599px) {
-  /* line 48, ../sass/main_styles.scss */
+  /* line 35, ../sass/main_styles.scss */
   #content-wrapper {
     width: 426px;
     height: 426px;
   }
 }
 @media (max-width: 479px) {
-  /* line 48, ../sass/main_styles.scss */
+  /* line 35, ../sass/main_styles.scss */
   #content-wrapper {
     width: 320px;
     height: 320px;
   }
 }
 
-/* line 66, ../sass/main_styles.scss */
+/* line 53, ../sass/main_styles.scss */
 h1 {
   margin: 10px 0 5px 0;
   font-size: 1.5em;
@@ -171,27 +158,27 @@ h1 {
 }
 
 /* board layout */
-/* line 74, ../sass/main_styles.scss */
+/* line 61, ../sass/main_styles.scss */
 #sudoku-game-wrapper {
   float: left;
   width: 661px;
   height: 661px;
 }
 @media (max-width: 767px) {
-  /* line 74, ../sass/main_styles.scss */
+  /* line 61, ../sass/main_styles.scss */
   #sudoku-game-wrapper {
     width: 493px;
     height: 493px;
   }
 }
 @media (max-width: 599px) {
-  /* line 74, ../sass/main_styles.scss */
+  /* line 61, ../sass/main_styles.scss */
   #sudoku-game-wrapper {
     width: 320px;
     height: 320px;
   }
 }
-/* line 86, ../sass/main_styles.scss */
+/* line 73, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game {
   width: 96%;
   height: 96%;
@@ -199,7 +186,7 @@ h1 {
   padding: 1%;
   background-color: #111111;
 }
-/* line 92, ../sass/main_styles.scss */
+/* line 79, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row {
   height: 10.51%;
   margin: 0 0 0.5% 0;
@@ -208,22 +195,23 @@ h1 {
   zoom: 1;
   /*for ie6/7*/
 }
-/* line 100, ../sass/main_styles.scss */
+/* line 87, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row:before,
 #sudoku-game-wrapper #sudoku-game .row:after {
   content: '';
   display: table;
 }
-/* line 104, ../sass/main_styles.scss */
+/* line 91, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row:after {
   clear: both;
 }
-/* line 107, ../sass/main_styles.scss */
+/* line 94, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row:last-child {
   margin-bottom: 0;
 }
-/* line 110, ../sass/main_styles.scss */
+/* line 97, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .column {
+  position: relative;
   float: left;
   display: block;
   width: 10.51%;
@@ -231,20 +219,20 @@ h1 {
   margin: 0 0.5% 0 0;
   background-color: white;
 }
-/* line 118, ../sass/main_styles.scss */
+/* line 106, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .column:last-child {
   margin-right: 0;
 }
-/* line 121, ../sass/main_styles.scss */
+/* line 109, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .row-thick {
   margin-bottom: 1%;
 }
-/* line 124, ../sass/main_styles.scss */
+/* line 112, ../sass/main_styles.scss */
 #sudoku-game-wrapper #sudoku-game .column-thick {
   margin-right: 1%;
 }
 
-/* line 130, ../sass/main_styles.scss */
+/* line 118, ../sass/main_styles.scss */
 .num-entry {
   width: 75%;
   height: 75%;
@@ -255,34 +243,197 @@ h1 {
   text-align: center;
 }
 
-/* line 140, ../sass/main_styles.scss */
+/* line 128, ../sass/main_styles.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 144, ../sass/main_styles.scss */
+/* line 132, ../sass/main_styles.scss */
 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-/* line 147, ../sass/main_styles.scss */
+/* line 135, ../sass/main_styles.scss */
 .set {
   color: #111111;
 }
 
-/* line 150, ../sass/main_styles.scss */
+/* line 138, ../sass/main_styles.scss */
 .blank {
   color: #04a0b5;
 }
 
-/* line 153, ../sass/main_styles.scss */
+/* line 141, ../sass/main_styles.scss */
 .invalid {
   color: #e20a0a;
 }
 
-/* line 157, ../sass/main_styles.scss */
+/* line 145, ../sass/main_styles.scss */
+.notes-wrapper {
+  position: absolute;
+  top: 0;
+  margin: 2% 0 0 8%;
+}
+@media (max-width: 599px) {
+  /* line 145, ../sass/main_styles.scss */
+  .notes-wrapper {
+    margin-top: 6%;
+  }
+}
+/* line 152, ../sass/main_styles.scss */
+.notes-wrapper .notes-num {
+  position: absolute;
+  display: none;
+}
+@media (max-width: 599px) {
+  /* line 152, ../sass/main_styles.scss */
+  .notes-wrapper .notes-num {
+    font-size: 0.6em;
+  }
+}
+/* line 35, ../sass/_mixins.scss */
+.notes-wrapper .notes-1 {
+  top: 6.3px;
+  left: 6.3px;
+}
+/* line 39, ../sass/_mixins.scss */
+.notes-wrapper .notes-2 {
+  top: 6.3px;
+  left: 23.1px;
+}
+/* line 43, ../sass/_mixins.scss */
+.notes-wrapper .notes-3 {
+  top: 6.3px;
+  left: 39.9px;
+}
+/* line 47, ../sass/_mixins.scss */
+.notes-wrapper .notes-4 {
+  top: 23.1px;
+  left: 6.3px;
+}
+/* line 51, ../sass/_mixins.scss */
+.notes-wrapper .notes-5 {
+  top: 23.1px;
+  left: 23.1px;
+}
+/* line 55, ../sass/_mixins.scss */
+.notes-wrapper .notes-6 {
+  top: 23.1px;
+  left: 39.9px;
+}
+/* line 59, ../sass/_mixins.scss */
+.notes-wrapper .notes-7 {
+  top: 39.9px;
+  left: 6.3px;
+}
+/* line 63, ../sass/_mixins.scss */
+.notes-wrapper .notes-8 {
+  top: 39.9px;
+  left: 23.1px;
+}
+/* line 67, ../sass/_mixins.scss */
+.notes-wrapper .notes-9 {
+  top: 39.9px;
+  left: 39.9px;
+}
+@media (max-width: 767px) {
+  /* line 35, ../sass/_mixins.scss */
+  .notes-wrapper .notes-1 {
+    top: 4.8px;
+    left: 4.8px;
+  }
+  /* line 39, ../sass/_mixins.scss */
+  .notes-wrapper .notes-2 {
+    top: 4.8px;
+    left: 17.6px;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .notes-wrapper .notes-3 {
+    top: 4.8px;
+    left: 30.4px;
+  }
+  /* line 47, ../sass/_mixins.scss */
+  .notes-wrapper .notes-4 {
+    top: 17.6px;
+    left: 4.8px;
+  }
+  /* line 51, ../sass/_mixins.scss */
+  .notes-wrapper .notes-5 {
+    top: 17.6px;
+    left: 17.6px;
+  }
+  /* line 55, ../sass/_mixins.scss */
+  .notes-wrapper .notes-6 {
+    top: 17.6px;
+    left: 30.4px;
+  }
+  /* line 59, ../sass/_mixins.scss */
+  .notes-wrapper .notes-7 {
+    top: 30.4px;
+    left: 4.8px;
+  }
+  /* line 63, ../sass/_mixins.scss */
+  .notes-wrapper .notes-8 {
+    top: 30.4px;
+    left: 17.6px;
+  }
+  /* line 67, ../sass/_mixins.scss */
+  .notes-wrapper .notes-9 {
+    top: 30.4px;
+    left: 30.4px;
+  }
+}
+@media (max-width: 599px) {
+  /* line 35, ../sass/_mixins.scss */
+  .notes-wrapper .notes-1 {
+    top: 3.1px;
+    left: 3.1px;
+  }
+  /* line 39, ../sass/_mixins.scss */
+  .notes-wrapper .notes-2 {
+    top: 3.1px;
+    left: 11.3px;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .notes-wrapper .notes-3 {
+    top: 3.1px;
+    left: 19.5px;
+  }
+  /* line 47, ../sass/_mixins.scss */
+  .notes-wrapper .notes-4 {
+    top: 11.3px;
+    left: 3.1px;
+  }
+  /* line 51, ../sass/_mixins.scss */
+  .notes-wrapper .notes-5 {
+    top: 11.3px;
+    left: 11.3px;
+  }
+  /* line 55, ../sass/_mixins.scss */
+  .notes-wrapper .notes-6 {
+    top: 11.3px;
+    left: 19.5px;
+  }
+  /* line 59, ../sass/_mixins.scss */
+  .notes-wrapper .notes-7 {
+    top: 19.5px;
+    left: 3.1px;
+  }
+  /* line 63, ../sass/_mixins.scss */
+  .notes-wrapper .notes-8 {
+    top: 19.5px;
+    left: 11.3px;
+  }
+  /* line 67, ../sass/_mixins.scss */
+  .notes-wrapper .notes-9 {
+    top: 19.5px;
+    left: 19.5px;
+  }
+}
+
+/* line 168, ../sass/main_styles.scss */
 #game-buttons {
   float: left;
   width: 106px;
@@ -290,17 +441,16 @@ input[type='number'] {
   font-size: 20px;
 }
 @media (max-width: 479px) {
-  /* line 157, ../sass/main_styles.scss */
+  /* line 168, ../sass/main_styles.scss */
   #game-buttons {
     width: 320px;
-    height: 320px;
   }
 }
-/* line 166, ../sass/main_styles.scss */
+/* line 176, ../sass/main_styles.scss */
 #game-buttons #timer {
   width: 94.66px;
   height: 30px;
-  margin: 0px 5px 17px 5px;
+  margin: 0 5px 17px 5px;
   padding-top: 6px;
   border: solid 1px transparent;
   background-color: #f7f7f7;
@@ -318,66 +468,80 @@ input[type='number'] {
   background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f7f7f7', EndColorStr='#e7e7e7');
 }
-/* line 173, ../sass/main_styles.scss */
+@media (max-width: 479px) {
+  /* line 176, ../sass/main_styles.scss */
+  #game-buttons #timer {
+    width: 312px;
+  }
+}
+/* line 186, ../sass/main_styles.scss */
 #game-buttons #timer p {
   width: 100%;
   text-align: center;
   color: #555555;
 }
+/* line 192, ../sass/main_styles.scss */
+#game-buttons .adding-note {
+  -webkit-box-shadow: 0 1px 4px #aaaaaa inset, 0 2px 3px white;
+  -moz-box-shadow: 0 1px 4px #aaaaaa inset, 0 2px 3px white;
+  box-shadow: 0 1px 4px #aaaaaa inset, 0 2px 3px white;
+  color: #04a0b5;
+}
 
-/* line 180, ../sass/main_styles.scss */
+/* line 198, ../sass/main_styles.scss */
 #win-screen {
   position: absolute;
   top: 0;
   display: none;
   width: 768px;
   height: 768px;
+  background-color: #fff;
   background-color: rgba(255, 255, 255, 0.85);
 }
 @media (max-width: 767px) {
-  /* line 180, ../sass/main_styles.scss */
+  /* line 198, ../sass/main_styles.scss */
   #win-screen {
     width: 600px;
     height: 600px;
   }
 }
 @media (max-width: 599px) {
-  /* line 180, ../sass/main_styles.scss */
+  /* line 198, ../sass/main_styles.scss */
   #win-screen {
     width: 426px;
     height: 426px;
   }
 }
 @media (max-width: 479px) {
-  /* line 180, ../sass/main_styles.scss */
+  /* line 198, ../sass/main_styles.scss */
   #win-screen {
     width: 320px;
     height: 320px;
   }
 }
-/* line 199, ../sass/main_styles.scss */
+/* line 218, ../sass/main_styles.scss */
 #win-screen p {
   margin-top: 300px;
   font-size: 4em;
   text-align: center;
 }
-/* line 204, ../sass/main_styles.scss */
+/* line 223, ../sass/main_styles.scss */
 #win-screen #win-buttons {
   max-width: 304px;
   margin: 30px auto;
   font-size: 2em;
 }
-/* line 208, ../sass/main_styles.scss */
+/* line 227, ../sass/main_styles.scss */
 #win-screen #win-buttons .button {
   float: left;
   width: 140px;
   height: 29px;
 }
-/* line 213, ../sass/main_styles.scss */
+/* line 232, ../sass/main_styles.scss */
 #win-screen #win-buttons #play-again:hover {
   color: #04a0b5;
 }
-/* line 216, ../sass/main_styles.scss */
+/* line 235, ../sass/main_styles.scss */
 #win-screen #win-buttons #exit:hover {
   color: #e20a0a;
 }

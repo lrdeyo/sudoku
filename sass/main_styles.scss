@@ -6,30 +6,17 @@ html {
 	font-family: 'Didact Gothic', sans-serif;
 }
 
-.button:before {
-	content: "";
-	display: block;
-	background: $white;
-	border-top: 2px solid #ddd;
-	position: absolute;
-	top: -18px;
-	left: -18px;
-	bottom: -18px;
-	right: -18px;
-	z-index: -1;
-	@include box-shadow( inset 0px 8px 48px #ddd );
-}
 .button, .button:link, .button:visited {
 	@include breakpoint( small-phone ) {
 		float: left;
 		display: inline;
 	}
 	display: block;
-	width: 96.66px;
+	width: 94.66px;
 	height: 21px;
 	margin: 5px 5px 17px 5px;
 	padding-top: 8px;
-	box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px $white;
+	@include box-shadow( 0 3px 8px #aaa, inset 0 2px 3px $white );
 	border: solid 1px transparent;
 	@include linear-gradient( $gradientFrom, $gradientTo );
 	font-size: 0.6em; 
@@ -42,7 +29,7 @@ html {
 	background-color: $offWhite;
 }​
 .button:focus, .button:active {
-	box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px $white;
+	@include box-shadow( 0 3px 4px #aaa inset, 0 2px 3px $white );
 }
 
 #content-wrapper {
@@ -108,6 +95,7 @@ h1 {
 			margin-bottom: 0;
 		}
 		.column {
+			position: relative;
 			float: left;
 			display: block;
 			width: 10.51%;
@@ -136,10 +124,10 @@ h1 {
 	font-size: 1.5em;
 	text-align: center;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 input[type='number'] {
 	-moz-appearance: textfield;
@@ -154,19 +142,44 @@ input[type='number'] {
 	color: $negative;
 }
 
+.notes-wrapper{
+	position: absolute;
+	top: 0;
+	margin: 2% 0 0 8%;
+	@include breakpoint( large-phone ) {
+		margin-top: 6%;	
+	}
+	.notes-num {
+		position: absolute;
+		display: none;
+		@include breakpoint( large-phone ) {
+			font-size: 0.6em;	
+		}
+	}
+	@include notes-position( 6.3px, 23.1px, 39.9px );
+	@include breakpoint( small-tablet ) {
+		@include notes-position( 4.8px, 17.6px, 30.4px );
+	}
+	@include breakpoint( large-phone ) {
+		@include notes-position( 3.1px, 11.3px, 19.5px );
+	}
+}
+
 #game-buttons {
 	float: left;
 	width: 106px;
 	@include breakpoint( small-phone ) {
 		width: 320px;
-		height: 320px;
 	}
 	margin-top: 1%;
 	font-size: 20px;
 	#timer {
 		width: 94.66px;
+		@include breakpoint( small-phone ) {
+			width: 312px;
+		}
 		height: 30px;
-		margin: 0px 5px 17px 5px;
+		margin: 0 5px 17px 5px;
 		padding-top: 6px;
 		border: solid 1px transparent;
 		@include linear-gradient( $gradientFrom, $gradientTo );
@@ -176,7 +189,12 @@ input[type='number'] {
 			color: $midMain
 		}
 	}
+	.adding-note {
+		@include box-shadow( 0 1px 4px #aaa inset, 0 2px 3px $white );
+		color: $positive;
+	}
 }
+
 #win-screen {
 	position: absolute;
 	top: 0;
@@ -195,6 +213,7 @@ input[type='number'] {
 		width: 320px;
 		height: 320px;
 	}
+	background-color: #fff;
 	background-color: rgba( 255, 255, 255, 0.85);
 	p {
 		margin-top: 300px;
